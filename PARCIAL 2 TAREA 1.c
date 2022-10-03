@@ -1,5 +1,5 @@
-//Realice un programa que calcule el número de Fibonacci de un número dado por el usuario
-//González Medina Claudia Karina
+//Realice un programa que calcule el nÃºmero de Fibonacci de un nÃºmero dado por el usuario
+//GonzÃ¡lez Medina Claudia Karina
 #include <stdio.h>
 
 int pidefibo();
