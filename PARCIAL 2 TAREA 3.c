@@ -1,4 +1,4 @@
-//Gonz·lez Medina Claudia Karina
+//Gonz√°lez Medina Claudia Karina
 
 #include <stdio.h>
 #define SIZE 10
