@@ -1,63 +1,42 @@
 //González Medina Claudia Karina
 
 #include <stdio.h>
-#define SIZE 10
-int pideN();
-void pideArreglo(int array[SIZE], int n);
-void selectionDirect(int array[SIZE], int n);
-void prinArray(int array[SIZE], int n);
 
-int main()
+void swap(int *xp, int *yp)
 {
-    int laN;
-    int arreglo[SIZE];
-    laN=pideN();
-    pideArreglo(arreglo, laN);
-    selectionDirect(arreglo, laN);
-    prinArray(arreglo, laN);
+    int temp = *xp;
+    *xp = *yp;
+    *yp = temp;
 }
 
-int pideN()
+void selectionSort(int arr[], int n)
 {
-    int n;
-    do{
-    printf("No. of fact: ");
-    scanf("%d", &n);
-    }while(n<1||n>SIZE);
-    return(n);
+    int i, j, min_idx;
+    for (i = 0; i < n-1; i++)
+    {
+        min_idx = i;
+        for (j = i+1; j < n; j++)
+          if (arr[j] < arr[min_idx])
+            min_idx = j;
+           if(min_idx != i)
+            swap(&arr[min_idx], &arr[i]);
+    }
 }
 
-void pideArreglo(int array[SIZE], int n)
+void printArray(int arr[], int size)
 {
     int i;
-    for(i = 0; i<=n; i++)
-    {
-        printf("Give me a number of fact %d: ", i);
-        scanf("%d", &array[i]);
-    }
-}
-
-void selectionDirect(int array[SIZE],int n)
-{
-    int i, m, j, t;
-    for(i=n; i<n-1; i++){
-    m=i;
-        for(j=i+1; j<n; j++){
-                if(array[j]<array[m]){
-                m=j;
-                t=array[i];
-                }
-                array[i]=array[m];
-                array[m]=t;
-            }
-    }
-}
-void prinArray(int array[SIZE], int n)
-{
-    int m;
-    for(m=0; m<n; m++)
-        printf("%d ", array[m]);
+    for (i=0; i < size; i++)
+        printf("%d ", arr[i]);
     printf("\n");
 }
 
-
+int main()
+{
+    int arr[] = {10, 9, 8, 7, 6, 5, 4, 3, 1, 0};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    selectionSort(arr, n);
+    printf("Sorted array: \n");
+    printArray(arr, n);
+    return 0;
+}
