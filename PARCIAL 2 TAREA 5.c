@@ -1,65 +1,36 @@
 //González Medina Claudia Karina
-
+#include <math.h>
 #include <stdio.h>
-#define SIZE 10
-int pideN();
-void pideArreglo(int array[SIZE], int n);
-void selection(int array[SIZE], int n);
-void printArray(int array[SIZE]);
 
-int main()
+void insertionSort(int arr[], int n)
 {
-    int laN;
-    int arreglo[SIZE];
-    laN=pideN();
-    pideArreglo(arreglo, laN);
-    selection(arreglo, laN);
-    printArray(arreglo);
-}
-
-int pideN()
-{
-    int n;
-    do{
-    printf("No. of fact: ");
-    scanf("%d", &n);
-    }while(n<1||n>SIZE);
-    return(n);
-}
-
-void pideArreglo(int array[SIZE], int n)
-{
-    int cont;
-    for(cont = 0; cont<=n; cont++)
-    {
-        printf("Give me a number of fact %d: ", cont);
-        scanf("%d", &array[cont]);
+    int i, key, j;
+    for (i = 1; i < n; i++) {
+        key = arr[i];
+        j = i - 1;
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;
     }
 }
 
-void selection(int array[SIZE],int n)
-{
-    int ref, remain, run, tmp;
-    for(ref=n-1; ref<n-1; ref++)
-    {
-        remain=ref;
-        for(run=ref+1; run<n; run++)
-            {
-                if(array[run]<array[remain])
-                remain=run;
-            tmp=array[ref];
-            array[ref]=array[remain];
-            array[remain]=tmp;
-            }
-    }
-}
-
-void printArray(int array[SIZE])
+void printArray(int arr[], int n)
 {
     int i;
-    for(i=0; i<SIZE; i++)
-        printf("%d ", array[i]);
+    for (i = 0; i < n; i++)
+        printf("%d ", arr[i]);
     printf("\n");
 }
 
+int main()
+{
+    int arr[] = { 10, 9, 8, 7, 6, 5, 4, 3, 1, 0};
+    int n = sizeof(arr) / sizeof(arr[0]);
 
+    insertionSort(arr, n);
+    printArray(arr, n);
+
+    return 0;
+}
