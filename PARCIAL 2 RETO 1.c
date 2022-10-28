@@ -1,6 +1,6 @@
-//Gonz·lez Medina Claudia Karina
-/*1. Dado un arreglo ordenado de enteros diferentes y un valor objetivo, el indice de la posiciÛn en donde
-deberÌa insertarse el valor objetivo, de forma que estuviera ordenado en el arreglo.
+//Gonz√°lez Medina Claudia Karina
+/*1. Dado un arreglo ordenado de enteros diferentes y un valor objetivo, el indice de la posici√≥n en donde
+deber√≠a insertarse el valor objetivo, de forma que estuviera ordenado en el arreglo.
 Ejemplo 1:
 Entrada: nums = [1, 3, 5, 6], objetivo = 5 Salida: 2
 Ejemplo 2:
