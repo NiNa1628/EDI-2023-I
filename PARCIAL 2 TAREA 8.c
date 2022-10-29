@@ -1,17 +1,17 @@
-//González Medina Claudia Karina
-/*En un programa integre las funciones de todos los métodos de ordenación revisados este parcial:
+//GonzÃ¡lez Medina Claudia Karina
+/*En un programa integre las funciones de todos los mÃ©todos de ordenaciÃ³n revisados este parcial:
   -Burbuja
-  -Inserción
-  -Selección
+  -InserciÃ³n
+  -SelecciÃ³n
   -Quicksort
-Realice un experimento para verificar el tiempo que se tarda en ordenar cada método de ordenación
-un arreglo de enteros de diferentes tamaños (utilice la función time).
-Solo debe contabilizar el tiempo del ordenamiento, no la creación del arreglo o la impresión.
-Cree una tabla en donde indique el número de elementos a ordenar, y el tiempo que se tardó en cada método, utilizando:
+Realice un experimento para verificar el tiempo que se tarda en ordenar cada mÃ©todo de ordenaciÃ³n
+un arreglo de enteros de diferentes tamaÃ±os (utilice la funciÃ³n time).
+Solo debe contabilizar el tiempo del ordenamiento, no la creaciÃ³n del arreglo o la impresiÃ³n.
+Cree una tabla en donde indique el nÃºmero de elementos a ordenar, y el tiempo que se tardÃ³ en cada mÃ©todo, utilizando:
   +un arreglo totalmente invertido
   +un arreglo ya ordenado
   +un arreglo aleatorio
-Realice esta tabla para diferentes tamaños de arreglo.*/
+Realice esta tabla para diferentes tamaÃ±os de arreglo.*/
 
 #include <stdio.h>
 #include <time.h>
@@ -23,7 +23,7 @@ void pideArreglo(int array[SIZE], int n);
 void bubble(int array[SIZE],int n);
 //INSERTION
 void insertionSort(int array[SIZE], int n);
-//SELECCIÓN
+//SELECCIÃ“N
 void selectionSort(int array[SIZE], int n);
 //QUICKSORT
 void quicksort(int array[SIZE], int inf, int sup);
@@ -100,7 +100,7 @@ void insertionSort(int array[SIZE], int n)
     }
 }
 
-//SELECCIÓN
+//SELECCIÃ“N
 void selectionSort(int array[], int n)
 {
     int i, j, min_idx;
