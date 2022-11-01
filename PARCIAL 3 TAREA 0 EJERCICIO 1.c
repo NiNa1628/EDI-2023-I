@@ -1,11 +1,11 @@
-//Gonz醠ez Medina Claudia Karina
-/*1.1.Definir una estructura que guarde los datos de cada canci髇:
-旵骴igo de la canci髇 (num閞ico)
-昇ombre de la canci髇
-昇ombre del alb鷐
-昇鷐ero de interpretes
-昇ombre del/de los interpretes (1 a 3 m醲imo)
-昇鷐ero de reproducciones*/
+//Gonz谩lez Medina Claudia Karina
+/*1.1.Definir una estructura que guarde los datos de cada canci贸n:
+鈥贸digo de la canci贸n (num茅rico)
+鈥ombre de la canci贸n
+鈥ombre del alb煤m
+鈥煤mero de interpretes
+鈥ombre del/de los interpretes (1 a 3 m谩ximo)
+鈥煤mero de reproducciones*/
 
 #include <stdio.h>
 #define SIZE 5
@@ -27,20 +27,20 @@ void leerArreglo(struct CANCION canciones[]);
 int mayorReproducciones(struct CANCION canciones[]);
 
 
-//1.2.Realice una funci髇 que reciba como par醡etro una canci髇 y capture todos susdatos
+//1.2.Realice una funci贸n que reciba como par谩metro una canci贸n y capture todos susdatos
 void leeCancion(struct CANCION *n)
 {
       fflush(stdin);
-      printf("Dame el C骴igo de la canci髇 (num閞ico): ");
+      printf("Dame el C贸digo de la canci贸n (num茅rico): ");
       scanf("%d", &n->codCancion);
       fflush(stdin);
-      printf("Dame el Nombre de la canci髇: ");
+      printf("Dame el Nombre de la canci贸n: ");
       scanf("%[^\n]", n->nomCancion);
       fflush(stdin);
-      printf("Dame el Nombre del alb鷐: ");
+      printf("Dame el Nombre del alb煤m: ");
       scanf("%[^\n]", n->nomAlbum);
       fflush(stdin);
-      printf("Dame el N鷐ero de interpretes: ");
+      printf("Dame el N煤mero de interpretes: ");
       scanf("%d", &n->numInterpretes);
       fflush(stdin);
       if(n->numInterpretes==1)
@@ -73,13 +73,13 @@ void leeCancion(struct CANCION *n)
                 fflush(stdin);
             }
             fflush(stdin);
-            printf("Dame el N鷐ero de reproducciones: ");
+            printf("Dame el N煤mero de reproducciones: ");
       scanf("%d", &n->numReproducciones);
 }
 
 
-/*1.3.Realice una funci髇 que reciba como par醡etro un arreglo de canciones y capture todas las canciones
-(haciendo uso de la funci髇 anterior)que el usuario necesite (m醲imo 100)*/
+/*1.3.Realice una funci贸n que reciba como par谩metro un arreglo de canciones y capture todas las canciones
+(haciendo uso de la funci贸n anterior)que el usuario necesite (m谩ximo 100)*/
 void leerArreglo(struct CANCION canciones[SIZE])
 {
     int cont;
@@ -90,8 +90,8 @@ void leerArreglo(struct CANCION canciones[SIZE])
 }
 
 
-/*1.4.Realice una funci髇 que reciba como par醡etro un arreglo de canciones ya capturadas y regrese la
-posici髇 en el arreglo en donde se encuentra la canci髇 con m醩 reproducciones.*/
+/*1.4.Realice una funci贸n que reciba como par谩metro un arreglo de canciones ya capturadas y regrese la
+posici贸n en el arreglo en donde se encuentra la canci贸n con m谩s reproducciones.*/
 int mayorReproducciones(struct CANCION canciones[])
 {
     int cont, mayor=0;
@@ -104,11 +104,11 @@ int mayorReproducciones(struct CANCION canciones[])
 }
 
 
-/*1.5.Escriba la funci髇 main de su programa, en donde:
-旸eclare un arreglo de canciones de 100 elementos
-昄lamea la funci髇 que captura los elementos del arreglo
-昄lame a la funci髇 que busca la canci髇 con mas reproducciones
-旾mprima la canci髇 con mayor n鷐ero de reproducciones*/
+/*1.5.Escriba la funci贸n main de su programa, en donde:
+鈥eclare un arreglo de canciones de 100 elementos
+鈥lamea la funci贸n que captura los elementos del arreglo
+鈥lame a la funci贸n que busca la canci贸n con mas reproducciones
+鈥mprima la canci贸n con mayor n煤mero de reproducciones*/
 
 int main()
 {
@@ -116,6 +116,6 @@ int main()
     struct CANCION canciones[100];
     leerArreglo(canciones);
     mayor=mayorReproducciones(canciones);
-    printf("La canci髇 m醩 reproducida en Spotify es: %s", canciones[mayor].nomCancion);
+    printf("La canci贸n m谩s reproducida en Spotify es: %s", canciones[mayor].nomCancion);
 }
 
