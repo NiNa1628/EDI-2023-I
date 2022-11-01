@@ -1,5 +1,5 @@
-//González Medina Claudia Karina
-/*2.Dados un arreglo de N números,  realice una función que ordene el arreglo
+//GonzÃ¡lez Medina Claudia Karina
+/*2.Dados un arreglo de N nÃºmeros,  realice una funciÃ³n que ordene el arreglo
 de forma descendente, utilizando el algoritmo de su preferencia. (Donde 0 <N <=100)*/
 
 #include <stdio.h>
