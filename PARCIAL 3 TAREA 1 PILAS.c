@@ -1,4 +1,4 @@
-//Claudia Karina Gonz·lez Medina
+//Claudia Karina Gonz√°lez Medina
 
 #include <stdio.h>
 #define STACK_CAPACITY 10
@@ -61,9 +61,9 @@ int isStackFull(Stack s)
 
 //Inserta valores dentro de la pila
 int push(Stack *s,int value)
-{//1. Preguntar si la pila no est· llena
+{//1. Preguntar si la pila no est√° llena
   if(isStackFull(*s) == 0) // !isStackFull(*s)
-  {// puedo insertar porque no est· llena
+  {// puedo insertar porque no est√° llena
     s->tope++;
     s->pila[s->tope] = value;
     s->tam++;
@@ -82,6 +82,6 @@ int pop(Stack *s, int *value)
     printf("Dato eliminado: %d",value);
   }
 
-  printf("Error: pila vacÌa");
+  printf("Error: pila vac√≠a");
   return -1;
 }
