@@ -1,4 +1,4 @@
-//Claudia Karina González Medina
+//Claudia Karina GonzÃ¡lez Medina
 
 #ifndef EDI_2023_I_SET_H
 #define EDI_2023_I_SET_H
@@ -14,8 +14,8 @@ void setupSet(Set *s);
 int existElement(Set s, int value);
 int addElement(Set *s, int value);
 
-void intersect(Set a, Set b, Set *result){ //Intersección
-    //Van aquedar en result los datos que estén en A y que también estén en B
+void intersect(Set a, Set b, Set *result){ //IntersecciÃ³n
+    //Van aquedar en result los datos que estÃ©n en A y que tambiÃ©n estÃ©n en B
     int i;
     for(i=0; i<a.size; i++)
     {
@@ -26,15 +26,15 @@ void intersect(Set a, Set b, Set *result){ //Intersección
     }
 }
 
-int deleteElements(Set *s, int value){ //Eliminar el dato específico
-    //Encontrar la posición en donde está el valor
+int deleteElements(Set *s, int value){ //Eliminar el dato especÃ­fico
+    //Encontrar la posiciÃ³n en donde estÃ¡ el valor
     int found= -1;
     int i;
     for(i=0; i<s->size && found== -1; i++){
         if(s->data[i]==value)
-            found=i; //Necesito el índice en donde está el valor
+            found=i; //Necesito el Ã­ndice en donde estÃ¡ el valor
     }
-    if(found != -1) //Si encontré el valor
+    if(found != -1) //Si encontrÃ© el valor
     {
         //for(; found<s->size; found++)
         int actual;
@@ -48,7 +48,7 @@ int deleteElements(Set *s, int value){ //Eliminar el dato específico
 }
 
 
-int deleteStartElement(Set *s, int value) //Eliminación al inicio
+int deleteStartElement(Set *s, int value) //EliminaciÃ³n al inicio
 {
     int i;
     for(i=0; i==0; i++)
@@ -56,7 +56,7 @@ int deleteStartElement(Set *s, int value) //Eliminación al inicio
     return value;
 }
 
-int deleteEndElement(Set *s, int value) //Eliminación al final
+int deleteEndElement(Set *s, int value) //EliminaciÃ³n al final
 {
     int i;
     for(i=0; i==SET_CAPACITY; i++)
